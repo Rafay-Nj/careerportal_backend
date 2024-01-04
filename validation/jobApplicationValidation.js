@@ -15,7 +15,7 @@ const validateJobApplication = (data) => {
     // data.province = !isEmpty(data.province) ? data.province : ''
     // data.postCode = !isEmpty(data.postCode) ? data.postCode : ''
     // data.country = !isEmpty(data.country) ? data.country : ''
-    data.resume = !isEmpty(data.resume) ? data.resume : ''
+    // data.resume = !isEmpty(data.resume) ? data.resume : ''
     data.motivationStatement = !isEmpty(data.motivationStatement) ? data.motivationStatement : ''
 
     // Check CNIC
@@ -74,11 +74,11 @@ const validateJobApplication = (data) => {
     // }
 
     // check resume
-    if (validator.isEmpty(data.resume)) {
-        errors.push("Resume is required")
-    } else if(!validator.isURL(data.resume)){
-        errors.push("Resume link error")
-    }
+    // if (validator.isEmpty(data.resume)) {
+    //     errors.push("Resume is required")
+    // } else if(!validator.isURL(data.resume)){
+    //     errors.push("Resume link error")
+    // }
 
 
     return {

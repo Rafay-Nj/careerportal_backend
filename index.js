@@ -4,12 +4,12 @@ const compression = require('compression')
 const bodyParser = require('body-parser')
 require("dotenv").config();
 
-// const jobListing = require('./routes/jobListing')
-// const jobApplication = require('./routes/jobApplication')
+const jobListing = require('./routes/jobListing')
+const jobApplication = require('./routes/jobApplication')
 const adminRoute = require('./routes/admin/admin')
-// const employeeRoute = require('./routes/employee')
-// const dropboxRoute = require('./routes/dropbox')
-// const statsRoute = require('./routes/stats')
+const employeeRoute = require('./routes/employee')
+const dropboxRoute = require('./routes/dropbox')
+const statsRoute = require('./routes/stats')
 
 const app = express();
 
@@ -45,11 +45,11 @@ mongoose
   .catch((err) => console.log(err));
 
 app.use('/api/admin', adminRoute)
-// app.use('/api/listings', jobListing)
-// app.use('/api/applications', jobApplication)
-// app.use('/api/employees', employeeRoute)
-// app.use('/api/dropbox', dropboxRoute)
-// app.use('/api/stats', statsRoute)
+app.use('/api/listings', jobListing)
+app.use('/api/applications', jobApplication)
+app.use('/api/employees', employeeRoute)
+app.use('/api/dropbox', dropboxRoute)
+app.use('/api/stats', statsRoute)
 
 const port = process.env.PORT || 7000;
 
