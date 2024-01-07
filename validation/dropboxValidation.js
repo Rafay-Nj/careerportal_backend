@@ -9,7 +9,7 @@ const validateDropboxInput = (data) => {
     data.fullname = !isEmpty(data.fullname) ? data.fullname : ''
     data.email = !isEmpty(data.email) ? data.email : ''
     data.phone = !isEmpty(data.phone) ? data.phone : ''
-    data.resume = !isEmpty(data.resume) ? data.resume : ''
+    // data.resume = !isEmpty(data.resume) ? data.resume : ''
     data.city = !isEmpty(data.city) ? data.city : ''
     data.motivationStatement = !isEmpty(data.motivationStatement) ? data.motivationStatement : ''
 
@@ -39,11 +39,11 @@ const validateDropboxInput = (data) => {
     }
 
     // check resume
-    if (validator.isEmpty(data.resume)) {
-        errors.push("Resume is required")
-    } else if(!validator.isURL(data.resume)){
-        errors.push("Resume link error")
-    }
+    // if (validator.isEmpty(data.resume)) {
+    //     errors.push("Resume is required")
+    // } else if(!validator.isURL(data.resume)){
+    //     errors.push("Resume link error")
+    // }
 
     return {
         errors,
